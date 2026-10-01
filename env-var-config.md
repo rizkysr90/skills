@@ -22,4 +22,4 @@ Requirements
 
 2. Create .env.example listing the three variables with placeholder values and a one-line comment each. The app does not read this file itself.
 3. Write internal/config/config_test.go covering: defaults applied when nothing is set, values overridden by env, invalid AppEnv, invalid port, and an unparsable port (e.g. "abc"). Use t.Setenv for isolation.
-4. Wire it into cmd/api/main.go: call config.Load() first, and on error print the message to stderr and exit with a non-zero status. 
+4. Wire it into entry point main file: call config.Load() first, and on error print the message to stderr and exit with a non-zero status. 
