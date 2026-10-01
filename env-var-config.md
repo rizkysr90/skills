@@ -7,6 +7,19 @@ Requirements
      - AppEnv (APP_ENV, default "local")
      - HTTPPort (HTTP_PORT, default 8080)
    - parse without generics
+   // Example
+      func Load() (Config, error) {
+      	var cfg Config
+      	err := env.Parse(&cfg)
+      	if err != nil {
+      		return Config{}, err
+      	}
+      	if err := cfg.validate(); err != nil {
+      		return Config{}, err
+      	}
+      	return cfg, nil
+      }
+
 2. Create .env.example listing the three variables with placeholder values and a one-line comment each. The app does not read this file itself.
 3. Write internal/config/config_test.go covering: defaults applied when nothing is set, values overridden by env, invalid AppEnv, invalid port, and an unparsable port (e.g. "abc"). Use t.Setenv for isolation.
 4. Wire it into cmd/api/main.go: call config.Load() first, and on error print the message to stderr and exit with a non-zero status. 
