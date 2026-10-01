@@ -6,6 +6,9 @@ Requirements
      - AppName (APP_NAME, default "app")
      - AppEnv (APP_ENV, default "local")
      - HTTPPort (HTTP_PORT, default 8080)
+     - LogLevel (LOG_LEVEL, default error) // debug,info,warn,error
+     - LogFormat (LOG_FORMAT, default json) // auto, json, console
+     - LogOutput (LOG_OUTPUT, default stdout) // stdout,stderr
    - parse without generics
    // Example
       func Load() (Config, error) {
