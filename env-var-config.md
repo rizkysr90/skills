@@ -14,7 +14,7 @@ Requirements
      - LogLevel (LOG_LEVEL, default error) // debug,info,warn,error
      - LogFormat (LOG_FORMAT, default json) // auto, json, console
      - LogOutput (LOG_OUTPUT, default stdout) // stdout,stderr
-     - RequestTimeout (REQUEST_TIMEOUT, default 120s)
+     - RequestTimeout (REQUEST_TIMEOUT, default 20)
      - MaxBodyBytes (MAX_BODY_BYTES, default 1048576)
      - LogBody (LOG_BODY, default false)
      - LogRequestBodyMaxBytes (LOG_REQUEST_BODY_MAX_BYTES, default 1024)
