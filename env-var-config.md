@@ -6,9 +6,15 @@ Requirements
      - AppName (APP_NAME, default "app")
      - AppEnv (APP_ENV, default "local")
      - HTTPPort (HTTP_PORT, default 8080)
+     - HTTPReadHeaderTimeout (HTTP_READ_HEADER_TIMEOUT,default 30)
+     - HTTPReadTimeout (HTTP_READ_TIMEOUT,default 30)
+     - HTTPWriteTimeout (HTTP_WRITE_TIMEOUT, default 30)
+     - HTTPIdleTimeout (HTTP_IDLE_TIMEOUT, default 60)
+     - HTTPShutdownTimeout (HTTP_SHUTDOWN_TIMEOUT, default 60)
      - LogLevel (LOG_LEVEL, default error) // debug,info,warn,error
      - LogFormat (LOG_FORMAT, default json) // auto, json, console
      - LogOutput (LOG_OUTPUT, default stdout) // stdout,stderr
+     - 
    - parse without generics
    // Example
       func Load() (Config, error) {
